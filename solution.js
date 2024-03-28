@@ -24,7 +24,7 @@ let cashBox = [
       let cashBoxCopy = JSON.parse(JSON.stringify(cashBox));
   
       if (cashReturnFix < 0) {
-        return `Customer should pay ${-cashReturnFix} Euro`;
+        return `Customer should pay more ${-cashReturnFix} Euro`;
       } else if (cashReturnFix === 0) {
         cashBox[cashBox.length - 1].total += paidAmount;
         return "No cash return needed";
