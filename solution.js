@@ -22,7 +22,7 @@ let cashBox = [
       let cashReturnFix = +cashReturn.toFixed(2);
       let cashReturnArray = [];
       let cashBoxCopy = JSON.parse(JSON.stringify(cashBox));
-  
+      console.log('This is your cash return:', cashReturnFix)
       if (cashReturnFix < 0) {
         return `Customer should pay more ${-cashReturnFix} Euro`;
       } else if (cashReturnFix === 0) {
@@ -80,8 +80,11 @@ let cashBox = [
   }
   
   let cashCounter = createCashCounter();
-  
+  console.log('This is our cash box at the beginning:', cashBox)
+
   console.log(cashCounter(77.87, 198.65), "\n");
   console.log(cashCounter(19.49, 100), "\n");
   console.log(cashCounter(265.77, 600), "\n");
   console.log(cashCounter(15, 100), "\n");
+  console.log(cashCounter(15, 100), "\n");
+
